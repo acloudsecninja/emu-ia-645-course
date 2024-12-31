@@ -7,12 +7,12 @@
 # CAUTION #
 
 # Define parameters
-$LogName = "Security"  # Target Event Log (e.g., Application, System, Security)
-$SourceName = "Fake_Security_Alert"  # Custom Event Source
+$LogName = "Application"  # Target Event Log (e.g., Application, System, Security) (Do No not Change)
+$SourceName = "FakeEventSource"  # Custom Event Source (Do No not Change)
 $EventID = 9999  # Custom Event ID
 $EntryType = "Information"  # Entry Type (Information, Warning, Error)
 $Message = "This is a fake security event."  # Message content
-$NumberOfEvents = 50  # Number of events to generate
+$NumberOfEvents = 300  # Number of events to generate - This May take a minute or two
 
 # Ensure the Event Source exists
 if (-not (Get-EventLog -LogName $LogName -Source $SourceName -ErrorAction SilentlyContinue)) {

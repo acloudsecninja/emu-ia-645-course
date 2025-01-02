@@ -2,3 +2,4 @@ fastapi
 uvicorn
 openai
 splunk-sdk
+nano

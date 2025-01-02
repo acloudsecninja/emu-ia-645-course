@@ -1,6 +1,6 @@
 import os
 import json
-import setup_and_install_openai as setup_and_install_openai
+import app as app
 import requests
 from splunklib import client
 
@@ -12,7 +12,7 @@ SPLUNK_PASSWORD = "password"
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")  # Set your OpenAI API key as an environment variable
 
 # Initialize OpenAI API
-setup_and_install_openai.api_key = OPENAI_API_KEY
+app.api_key = OPENAI_API_KEY
 
 def query_splunk(search_query):
     """Query Splunk using Splunk SDK."""
@@ -46,7 +46,7 @@ def query_splunk(search_query):
 def analyze_with_openai(prompt):
     """Send data to OpenAI for analysis."""
     try:
-        response = setup_and_install_openai.Completion.create(
+        response = app.Completion.create(
             engine="text-davinci-003",  # Replace with your desired OpenAI model
             prompt=prompt,
             max_tokens=150,

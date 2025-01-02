@@ -1,5 +1,3 @@
-fastapi
-uvicorn
-openai
-splunk-sdk
-nano
+openai==0.28
+flask  # If building an API
+python-dotenv

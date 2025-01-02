@@ -6,7 +6,7 @@
 
 2. OPENAI is the company for ChatGPT https://chatgpt.com . In this case you must add the environment variable (which is your API KEY for access) which is mostly setup for you in the file structure in github and the final and you just must figure out how it all connects. 
 
-- HINT: Look at the ENV you set in the openai_install_script.sh and it should make sense how it all works with the dockerfile and the script as that is critical to see! You may find other typos in the codebase too.
+- HINT: Look at how to export the variable into the docker container when you generate it.
 
 3. Once you are able to deploy the script and docker container. You should be able to run the following command to verify that the environment variable it setup correctly and it should be able to connect to OPENAI when you connect to the container itself which we will check later in the Final.
 
@@ -19,7 +19,7 @@ docker exec -it <container_name_or_id> /bin/bash
 5. You can check if your environment variable is setup correctly using this command.
 
 ```bash
-docker exec -it <container_name> env | grep OPENAI_API_KEY
+docker exec -it <container_name> env | grep openai.api_key
 ```
 
 6. You should then be able to interact with the API as shown below which means you have set it up correctly.  This curl command below will ask OpenAI to tell you a joke and you should get a response! You will need to connect to the docker container and run the command below which should give you a response (You will need to figure out how to connect to the docker container and see this output.) 
@@ -29,7 +29,7 @@ docker exec -it <container_name> env | grep OPENAI_API_KEY
 ```bash
 curl -X POST http://localhost:8001/chat \
 -H "Content-Type: application/json" \
--d '{"prompt": "Tell me a joke.", "model": "text-davinci-003"}'
+-d '{"prompt": "Tell me a joke.", "model": "gpt-4o-mini"}'
 ```
 
 

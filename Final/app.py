@@ -2,13 +2,11 @@ import openai
 import os
 from flask import Flask, request, jsonify
 
-# Initialize Flask app
 app = Flask(__name__)
 
-# Set OpenAI API key
+# Set OpenAI API Key from the environment variable
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
-# Endpoint for ChatGPT interaction
 @app.route("/chat", methods=["POST"])
 def chat():
     data = request.json
@@ -18,10 +16,10 @@ def chat():
 
     try:
         response = openai.ChatCompletion.create(
-            model="gpt-4",  # Change to "gpt-3.5-turbo" if needed
+            model="gpt-4o-mini",
             messages=[
                 {"role": "system", "content": "You are a helpful assistant."},
-                {"role": "user", "content": prompt},
+                {"role": "user", "content": prompt}
             ],
             max_tokens=100,
             temperature=0.7,
@@ -30,9 +28,8 @@ def chat():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
-# Health check endpoint
 @app.route("/health", methods=["GET"])
-def health_check():
+def health():
     return jsonify({"status": "running"}), 200
 
 if __name__ == "__main__":

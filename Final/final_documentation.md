@@ -1,6 +1,8 @@
 #  Final
 
-- In this Final you will setup an openAI configuration API key https://platform.openai.com/login/ and use that key to connect this docker container to OPENAI API.
+- In this Final you will setup an openAI configuration API key https://platform.openai.com/login/ and use that key to connect this docker container to OPENAI API. 
+
+- NOTE: You may need to switch to some dummy gmail accounts or create a new one to ensure you have credits as there a lot of limits to accessing OpenAI due to fraud and other security requirements. https://platform.openai.com/docs/guides/rate-limits
 
 1. You will install a local install of Docker container with access to the OPENAI API which means you need to run the openai_install_script.sh
 
@@ -33,6 +35,6 @@ curl -X POST http://localhost:8001/chat \
 ```
 
 
-6. Once you have it working you should see the output in Docker Desktop and show a screenshot in your upload! Congrats you have completed this lab which can show you the power of OpenAI and data analytics in CyberSecurity! 
+6. Once you have it working you should see the output in Docker Desktop and show a screenshot in your upload! Congrats you have completed this lab which can show you the power of OpenAI and data analytics in CyberSecurity! If you are able to get an error relating to {"error":"You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors."} and you can prove that with a screenshot then that will be enough to complete the lab as it may not work due to the requirements and security around OpenAI but this shows the code and setup and configuration is right! Great work!
 
 7. The purpose of this lab was to make something very complicated(docker,API,containers) seem easy and in general get you thinking that you could use this in future roles to use the power of AI to help in splunk data in cybersecurity. I wanted to expand on this with connecting to splunk itself ,but I think this is complicated enough. Let me know what you think!

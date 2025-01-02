@@ -3,4 +3,4 @@
 docker build -t openai-local .
 
 
-docker run -d -p 8000:8000 openai-local
+docker run -d -p 8001:8001 openai-local

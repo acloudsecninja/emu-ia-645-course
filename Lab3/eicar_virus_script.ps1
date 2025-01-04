@@ -1,4 +1,4 @@
-# Define the path for the log file
+# Define the path for the log file.
 $LogFilePath = "C:\EICAR_Test_logs\virus_emulation.log"
 
 # Create the directory if it doesn't exist

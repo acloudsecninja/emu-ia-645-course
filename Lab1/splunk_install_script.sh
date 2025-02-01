@@ -10,6 +10,7 @@ docker pull splunk/splunk:latest
 docker run --name splunkfree \
   --hostname splunkfree \
   -p 8000:8000 \
+  -p 10000:10000/tcp \
   -p 8080:8080 \
   -p 514:514/tcp \
   -p 9997:9997 \
@@ -17,4 +18,3 @@ docker run --name splunkfree \
   -e "SPLUNK_PASSWORD=password" \
   -e "SPLUNK_START_ARGS=--accept-license" \
   -e "SPLUNK_LICENSE_URI=Free" \
-  -it splunk/splunk:latest

@@ -1,13 +1,19 @@
 #!/bin/bash -x
 
-docker pull splunk/splunk:latest ## This will pull the latest version of Splunk Enterprise
+# Pull the latest version of Splunk Enterprise
+docker pull splunk/splunk:latest
 
-
-## This will deploy a newly created docker container with spunk with a default password of password ##
-## and admin as the main user and it will allow the container to come up. ##
-## This is for testing and dev environments only.
-## This accepts the "Free License for Splunk"
-docker run --name splunkfree --hostname splunkfree -p 8000:8000 -p 8080:8080 -p 514:514 -p 9997:9997  \
+# Deploy a newly created Docker container for Splunk with privileged port 514 enabled
+# Default password is set to "password" with "admin" as the main user
+# This is for testing and development environments only
+# Accepts the "Free License for Splunk"
+docker run --name splunkfree \
+  --hostname splunkfree \
+  -p 8000:8000 \
+  -p 8080:8080 \
+  -p 514:514/tcp \
+  -p 9997:9997 \
+  --cap-add=NET_BIND_SERVICE \
   -e "SPLUNK_PASSWORD=password" \
   -e "SPLUNK_START_ARGS=--accept-license" \
   -e "SPLUNK_LICENSE_URI=Free" \

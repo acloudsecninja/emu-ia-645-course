@@ -18,3 +18,4 @@ docker run --name splunkfree \
   -e "SPLUNK_PASSWORD=password" \
   -e "SPLUNK_START_ARGS=--accept-license" \
   -e "SPLUNK_LICENSE_URI=Free" \
+  -it splunk/splunk:latest

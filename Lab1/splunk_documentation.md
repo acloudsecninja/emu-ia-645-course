@@ -8,5 +8,3 @@ I was able to use this documentation to recreate this a format that students are
 
 
 - acloudsecninja - Professor Weber
-
-asdsafdg

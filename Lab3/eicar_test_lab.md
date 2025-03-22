@@ -15,8 +15,6 @@ sourcetype = eicar_logs
 index = main
 ```
 
-3. Once you have this then you can download the eicar test file on your windows system and activate it on your local system so it will generate a "real virus" alert. Turn off your AV on your local windows system before adding it and then once its added then turn it back on and it should give you an alert. https://www.eicar.org/download/eicar-com-2/?wpdmdl=8842&refresh=6778b901837bd1735964929 (This is the URL for the test file and your windows system AV needs to be off - i.e windows defender ,etc. )
-
-4. Refer to the video for the rest of the results and expected outcomes.
+3. Refer to the video for the rest of the expected results as you need to get the test local logs setup in input.conf and then run the scripts that will populate in splunk.
 
 - acloudsecninja - Professor Weber

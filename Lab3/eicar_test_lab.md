@@ -18,3 +18,4 @@ index = main
 3. Refer to the video for the rest of the expected results as you need to get the test local logs setup in input.conf and then run the scripts that will populate in splunk.
 
 - acloudsecninja - Professor Weber
+ - Jack Keen Edit

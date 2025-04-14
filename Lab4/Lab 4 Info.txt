@@ -1,0 +1,9 @@
+Link to Alternative:
+
+Logstash: https://www.elastic.co/logstash
+
+Kibana: https://www.elastic.co/kibana
+
+Docker: https://hub.docker.com/_/logstash
+
+Github: https://github.com/docker-library/repo-info/tree/master/repos/logstash

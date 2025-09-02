@@ -17,5 +17,6 @@ docker run --name splunkfree \
   --cap-add=NET_BIND_SERVICE \
   -e "SPLUNK_PASSWORD=password" \
   -e "SPLUNK_START_ARGS=--accept-license" \
+  -e "SPLUNK_GENERAL_TERMS=--accept-sgt-current-at-splunk-com" \
   -e "SPLUNK_LICENSE_URI=Free" \
   -it splunk/splunk:latest

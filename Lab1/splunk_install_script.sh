@@ -1,7 +1,7 @@
 #!/bin/bash -x
 
 # Pull the latest version of Splunk Enterprise
-docker pull splunk/splunk:latest
+docker pull splunk/splunk:9.4
 
 # Deploy a newly created Docker container for Splunk with privileged port 514 enabled
 # Default password is set to "password" with "admin" as the main user
@@ -19,4 +19,4 @@ docker run --name splunkfree \
   -e "SPLUNK_START_ARGS=--accept-license" \
   -e "SPLUNK_GENERAL_TERMS=--accept-sgt-current-at-splunk-com" \
   -e "SPLUNK_LICENSE_URI=Free" \
-  -it splunk/splunk:latest
+  -it splunk/splunk:9.4

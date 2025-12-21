@@ -19,7 +19,7 @@ docker exec -it <container_name_or_id> /bin/bash
 5. You can check if your environment variable is setup correctly using this command.
 
 ```bash
-docker exec -it <container_name> env | grep openai.api_key
+docker exec -it <container_name> env | grep OPENAI_API_KEY
 ```
 
 6. You should then be able to interact with the API as shown below which means you have set it up correctly.  This curl command below will ask OpenAI to tell you a joke and you should get a response! You will need to connect to the docker container and run the command below which should give you a response (You will need to figure out how to connect to the docker container and see this output.) 

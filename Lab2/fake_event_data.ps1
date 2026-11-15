@@ -20,6 +20,9 @@ if (-not (Get-EventLog -LogName $LogName -Source $SourceName -ErrorAction Silent
     New-EventLog -LogName $LogName -Source $SourceName
 }
 
+#Lab 2 modification - Nikki P. submission
+#Modified lab for Splunk security
+
 # Generate fake events
 Write-Host "Generating $NumberOfEvents fake events in the '$LogName' log with EventID $EventID..."
 for ($i = 1; $i -le $NumberOfEvents; $i++) {

@@ -33,6 +33,9 @@ function Generate-FakeVirusData {
     }
 }
 
+#Edited script Lab 3 fake virus - Nikki Parrish
+#Saved to repository for submission
+
 # Generate 200 fake virus events
 Write-Host "Generating fake virus data for Splunk ingestion..."
 Generate-FakeVirusData -EventCount 200

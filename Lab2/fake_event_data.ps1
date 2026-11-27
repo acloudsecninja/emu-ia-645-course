@@ -1,3 +1,6 @@
+# IA645 Lab 2 - edited by Koushik Ahmed (GitHub: koushikahmed2) on 2026-11-26
+# Change: event message now names the student so these runs are easy to find in Splunk.
+
 # CAUTION #
 
 # THIS IS FOR TESTING ONLY.
@@ -11,7 +14,7 @@ $LogName = "Application"  # Target Event Log (e.g., Application, System, Securit
 $SourceName = "FakeEventSource"  # Custom Event Source (Do No not Change)
 $EventID = 9999  # Custom Event ID
 $EntryType = "Information"  # Entry Type (Information, Warning, Error)
-$Message = "This is a fake security event."  # Message content
+$Message = "This is a fake security event - IA645 Lab 2 run by Koushik Ahmed."  # Message content
 $NumberOfEvents = 300  # Number of events to generate - This May take a minute or two
 
 # Ensure the Event Source exists
